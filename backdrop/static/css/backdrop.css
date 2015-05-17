@@ -7408,12 +7408,6 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
-/*
-.main-content {
-    padding-bottom: $footer-height;
-    overflow: auto;
-}
-*/
 .article p img {
   float: left;
   margin: 5px;
@@ -7446,14 +7440,7 @@ footer {
   max-width: 62.5rem;
   border-top: 0.25rem solid #71030c;
   background: #EFEFEF;
-  min-width: 100%;
-  /*
-    position: absolute;
-    bottom: 0;
-    height: $footer-height;
-    margin-top: -$footer-height;
-    padding-top: rem-calc(10);
-*/ }
+  min-width: 100%; }
   footer:before, footer:after {
     content: " ";
     display: table; }
@@ -7480,11 +7467,7 @@ footer {
   margin-top: 0;
   margin-bottom: 0;
   max-width: 62.5rem;
-  max-width: none;
-  height: 100%;
-  /*
-    z-index: -10000;
-*/ }
+  max-width: none; }
   .master-row:before, .master-row:after {
     content: " ";
     display: table; }
@@ -7497,8 +7480,7 @@ footer {
     float: left;
     z-index: 10;
     box-shadow: 0 0 0.625rem 0.125rem #333333;
-    position: relative;
-    min-height: 100%; }
+    position: relative; }
     @media only screen and (min-width:64.063em) {
       .master-row .content-pane {
         padding-left: 0;
@@ -7520,29 +7502,19 @@ footer {
     background-position: center;
     position: relative;
     padding-top: 1.125rem;
-    padding-bottom: 1.125rem;
-    /*
-        min-height: rem-calc(350);
-        :not(i) {
-            font-family: 'PT Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-        }
-*/
-    /*
-        .th {
-            margin-top: rem-calc(14);
-            margin-bottom: rem-calc(14);
-        }
-*/ }
+    padding-bottom: 1.125rem; }
     .master-row .image-pane * {
       color: #FFFFFF; }
+    .master-row .image-pane form {
+      color: #222; }
     .master-row .image-pane div, .master-row .image-pane span, .master-row .image-pane a, .master-row .image-pane p {
       font-size: 0.9rem; }
     .master-row .image-pane i {
       color: inherit; }
     .master-row .image-pane a {
-      color: #DEDEDE; }
+      color: #EFEFEF; }
     .master-row .image-pane a:active, .master-row .image-pane a:hover {
-      color: #bfbfbf; }
+      color: #cecece; }
     @media only screen and (min-width:64.063em) {
       .master-row .image-pane {
         padding-left: 0;
@@ -7559,19 +7531,40 @@ footer {
           margin-left: 0;
           margin-right: auto; } }
 
+/*
+@media only screen and (min-width:64.063em) {
+    .master-row {
+        height: 100%;
+    }
+    .content-pane {
+        height: 100%;
+    }
+    #content1 {
+        min-height: 100%;
+        margin-bottom: -206px;
+    }
+    #content1:after {
+        content: "";
+        display: block;
+    }
+    #foot, #content1:after {
+        height:206px;
+    }
+}
+*/
 .title-bar h1 {
-  font-size: 3.75rem;
+  font-size: 3.125rem;
   display: inline-block;
   margin-right: 1.25rem;
   margin-bottom: 0; }
 .title-bar h2 {
-  /*
-        font-size: rem-calc(49);
-*/
   line-height: 0.8;
   display: inline-block;
   margin-bottom: 0;
   margin-top: -0.625rem; }
+@media only screen and (min-width:40.063em) {
+  .title-bar h1 {
+    font-size: 3.75rem; } }
 .title-bar hr {
   margin-top: 0.625rem;
   margin-bottom: 0.625rem; }
@@ -7704,34 +7697,6 @@ table.transparent {
     margin: 0;
     text-align: left; }
 
-/*
-.social-button {
-    @include button;
-    margin-top: rem-calc(5);
-    margin-left: rem-calc(1);
-    margin-right: rem-calc(1);
-    padding-top: rem-calc(8.5);
-    padding-bottom: rem-calc(8.5);
-    padding-left: rem-calc(5);
-    padding-right: rem-calc(5);
-    margin-bottom: 0;
-}
-*/
-/*
-ul.link-list {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-top: rem-calc(10);
-    list-style-type: none;
-    text-align: center;
-    li {
-        display: inline-block;
-        margin-left: rem-calc(10);
-        margin-right: rem-calc(10);
-    }
-}
-*/
 .copyright {
   position: absolute;
   bottom: 0; }
@@ -7742,9 +7707,6 @@ ul.link-list {
     margin-bottom: 0.625rem; }
 
 .blogroll {
-  /*
-    @include panel;
-*/
   display: block;
   margin: 0;
   padding: 0.875rem 0;
@@ -7752,9 +7714,6 @@ ul.link-list {
   list-style-position: outside;
   font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
   text-align: center;
-  /*
-    background-color:rgba(242,242,242,0.6);
-*/
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 1.25rem; }
@@ -7788,10 +7747,7 @@ ul.link-list {
   @media only screen and (min-width:40.063em) and (max-width:64em) {
     .blogroll {
       margin-left: initial;
-      margin-right: initial;
-      /*
-        margin-top: rem-calc(14);
-*/ } }
+      margin-right: initial; } }
   .blogroll li {
     margin-bottom: 0; }
     .blogroll li a:not(.botton) {
@@ -7803,9 +7759,6 @@ ul.link-list {
     padding-right: 0.625rem; }
 
 .info-bar {
-  /*
-    @include panel;
-*/
   border-top: 0.0625rem solid #EFEFEF;
   border-bottom: 0.0625rem solid #EFEFEF;
   padding: 0.5rem; }
@@ -7820,10 +7773,10 @@ ul.link-list {
 p.tag-page {
   line-height: 1.9; }
 
-.summary {
-  padding-bottom: 0.3125rem; }
-  .summary pre {
-    display: none; }
+.summary pre {
+  display: none; }
+.summary .th {
+  margin-bottom: 1.25rem; }
 
 .article {
   padding-bottom: 0.3125rem; }
@@ -7871,18 +7824,53 @@ pre {
 .social-list {
   margin-top: 0.875rem; }
 
-.link-list {
-  /*
-    @media only screen and (min-width:64.063em) {
-        position: absolute;
-        bottom: rem-calc(18);
-    }
-*/ }
-
 .img-center {
   float: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
   display: block; }
+
+/*
+Tipue Search 4.0
+Copyright (c) 2014 Tipue
+Tipue Search is released under the MIT License
+http://www.tipue.com/search
+*/
+/*
+Modified by Chris MacMackin, May 17 2015
+*/
+#tipue_search_content {
+  margin-bottom: 1.5625rem; }
+
+#tipue_search_input {
+  color: #222; }
+
+#tipue_search_loading {
+  padding-top: 60px;
+  background: #FAFAFA url('../loader.gif') no-repeat left; }
+
+#tipue_search_results_count {
+  font: 300 13px/1.6 'Open Sans', sans-serif;
+  color: #333; }
+
+.tipue_search_content_url {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  margin-bottom: 0.625rem; }
+
+.tipue_search_content_url a {
+  color: #666666;
+  text-decoration: none; }
+
+.tipue_search_content_url a:hover {
+  color: #585858; }
+
+.h01 {
+  color: #1777a3;
+  font-weight: 400; }
 
 /*# sourceMappingURL=backdrop.css.map */
